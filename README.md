@@ -1,4 +1,5 @@
 # Odoo 12 with Docker & Docker Compose.
+Using Ubuntu 18.04 & Wkhtmltopdf 0.12.5-*
 
 ## Run Odoo.
 `docker-compose up`
