@@ -2,7 +2,7 @@ version: '3'
 
 services:
   db:
-    image: postgres:11
+    image: postgres:10
     environment:
       - POSTGRES_USER=odoo
       - POSTGRES_PASSWORD=odoo
@@ -18,6 +18,6 @@ services:
       - ./odoo-data:/var/lib/odoo
     ports:
       - "9069:8069"
-      - "9072:8071"
+      - "9071:8071"
     depends_on:
       - db
