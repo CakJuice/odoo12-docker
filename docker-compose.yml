@@ -14,8 +14,9 @@ services:
     build: .
     command: odoo -c /etc/odoo/odoo.conf
     volumes:
-      - ./extra-addons:/mnt/extra-addons
-      - ./odoo-data:/var/lib/odoo
+      - ./addons-enterprise:/mnt/addons-enterprise
+      - ./addons-extra:/mnt/addons-extra
+      - ./odoo-data:/root
     ports:
       - "9069:8069"
       - "9071:8071"
