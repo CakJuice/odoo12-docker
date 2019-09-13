@@ -17,5 +17,10 @@ RUN apt install -y ./odoo_12.0.latest_all.deb
 COPY ./odoo.conf /etc/odoo/
 RUN chown odoo:odoo /etc/odoo/odoo.conf
 
-RUN mkdir -p /mnt/extra-addons/
-RUN chown -R odoo:odoo /mnt/extra-addons/
+RUN mkdir -p /mnt/addons-enterprise/
+RUN chown -R odoo:odoo /mnt/addons-enterprise/
+COPY ./addons-enterprise /mnt/addons-enterprise/
+
+RUN mkdir -p /mnt/addons-extra/
+RUN chown -R odoo:odoo /mnt/addons-extra/
+COPY ./addons-extra /mnt/addons-extra/
